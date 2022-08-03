@@ -1,8 +1,16 @@
 import React from 'react';
 
+import {
+  Header,
+  Table,
+} from '../components';
+
 function Home() {
   return (
-    <h1>Hello world</h1>
+    <div>
+      <Header />
+      <Table />
+    </div>
   );
 }
 

@@ -1,0 +1,45 @@
+input {
+  margin: 4px 4px;
+  max-width: 220px;
+  min-width: 140px;
+  width: 30%;
+}
+
+.header-main-container {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.header-image-logo-content {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  max-width: 360px;
+  min-width: 200px;
+  width: 30%;
+}
+
+.patient-form-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+}
+
+.patient-form-inputs-container {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
+  max-width: 80%;
+  width: 100%;
+}
+
+.header-title-content {
+  margin-bottom: 1em;
+  text-align: center;
+}

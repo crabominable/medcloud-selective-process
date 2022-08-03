@@ -4,11 +4,11 @@ import cors from 'cors';
 
 import 'express-async-errors';
 
-import { patientRoute } from '../routes';
+import patientRoute from '../routes';
 
 import {
-    domainError,
-    jwtDomainError,
+  domainError,
+  jwtDomainError,
 } from '../middlewares';
 
 const app = express();
@@ -21,6 +21,4 @@ app.use('/patients', patientRoute);
 app.use(jwtDomainError);
 app.use(domainError);
 
-app.get('/coffee', (_req, res) => res.status(418).end());
-
-module.exports = app;
+export default app;
