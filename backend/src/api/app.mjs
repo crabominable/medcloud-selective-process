@@ -1,15 +1,15 @@
+/* eslint-disable import/extensions */
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
 import 'express-async-errors';
 
-import patientRoute from '../routes';
+import patientRoute from '../routes/index.mjs';
 
 import {
   domainError,
-  jwtDomainError,
-} from '../middlewares';
+} from '../middlewares/index.mjs';
 
 const app = express();
 
@@ -18,7 +18,6 @@ app.use(bodyParser.json());
 
 app.use('/patients', patientRoute);
 
-app.use(jwtDomainError);
 app.use(domainError);
 
 export default app;

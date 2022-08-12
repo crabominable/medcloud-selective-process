@@ -1,12 +1,13 @@
 {
-  "name": "medcloud-selective-process-backend",
+  "name": "medcloud-api",
   "version": "1.0.0",
-  "main": "./src/api/server.js",
+  "main": "./src/api/server.mjs",
   "engines": {
     "node": ">=16.0.0"
   },
   "engineStrict": true,
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "node .",
     "dev": "nodemon .",
@@ -16,18 +17,23 @@
   "author": "Lucas Pinheiro",
   "license": "ISC",
   "devDependencies": {
+    "@types/joi": "^17.2.3",
     "eslint": "^8.21.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "prisma": "^4.1.1"
   },
   "dependencies": {
+    "@joi/date": "^2.1.0",
+    "@prisma/client": "^4.1.1",
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-async-errors": "^3.1.1",
     "joi": "^17.6.0",
+    "moment": "^2.29.4",
     "mysql2": "^2.3.3"
   }
 }

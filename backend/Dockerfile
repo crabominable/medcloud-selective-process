@@ -1,15 +1,19 @@
 FROM node:lts
 
-WORKDIR /app
+USER node
 
-COPY ./package*.json ./
+RUN mkdir -p /home/node/app
+
+WORKDIR /home/node/app
+
+COPY --chown=node package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY --chown=node . .
 
-RUN npx prisma generate
+ENV HOST=0.0.0.0 PORT=3000
 
-EXPOSE 3001
+EXPOSE ${PORT}
 
 CMD ["npm", "run", "dev"]
