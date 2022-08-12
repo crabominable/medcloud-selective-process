@@ -2,9 +2,9 @@ version: "3"
 services:
 
   api.prod.docker:
-    container_name: "medcloud_api"
+    container_name: "medcloud-api"
     restart: "always"
-    image: medcloud_api
+    image: medcloud-api
     user: root
     working_dir: /app/medcloud/backend
     environment:
@@ -17,3 +17,4 @@ services:
       - 3001:3001
     env_file:
       - /etc/environment
+    command: "/./app/pm2/start.sh"
