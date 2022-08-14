@@ -16,4 +16,6 @@ ENV HOST=0.0.0.0 PORT=3000
 
 EXPOSE ${PORT}
 
+RUN npx prisma generate
+
 CMD ["npm", "run", "dev"]

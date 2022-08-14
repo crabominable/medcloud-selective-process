@@ -18,3 +18,6 @@ RUN apt-get install default-mysql-client -y
 RUN npm install -g npm
 RUN npm install -g pm2
 RUN pm2 install pm2-logrotate
+RUN pm2 start /app/medcloud-selective-process/pm2/pm2-production.json
+
+RUN tail -f /dev/null
